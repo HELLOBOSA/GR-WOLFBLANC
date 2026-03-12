@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RCTRNPKEVJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RCTRNPKEVJ');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+
+  <title>Αρχιτέκτονας Αθήνα | Wolfblanc Architects</title>
+  <meta name="description" content="Αρχιτεκτονικό γραφείο στην Αθήνα. Κατοικίες, ανακαινίσεις και τουριστικά καταλύματα με μεθοδολογία BIM. Μέλος ΤΕΕ (Ν.168011) · WELL AP. Δωρεάν αρχική συνάντηση.">
+
+  <link rel="canonical" href="https://wolfblanc.gr">
+  <link rel="alternate" hreflang="el" href="https://wolfblanc.gr">
+  <link rel="alternate" hreflang="x-default" href="https://wolfblanc.gr">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:title" content="Αρχιτέκτονας Αθήνα | Wolfblanc Architects">
+  <meta property="og:description" content="Αρχιτεκτονικό γραφείο στην Αθήνα. Μέλος ΤΕΕ · WELL AP · Μεθοδολογία BIM.">
+  <meta property="og:url" content="https://wolfblanc.gr">
+  <meta property="og:site_name" content="Wolfblanc Architects">
+  <meta property="og:image" content="https://wolfblanc.com/wp-content/uploads/2026/01/WOLFBLANC-ARCHITECTS-LOGO_lwsoptimized.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Αρχιτέκτονας Αθήνα | Wolfblanc Architects">
+  <meta name="twitter:description" content="Αρχιτεκτονικό γραφείο στην Αθήνα. Μέλος ΤΕΕ · WELL AP.">
+  <meta name="twitter:image" content="https://wolfblanc.com/wp-content/uploads/2026/01/WOLFBLANC-ARCHITECTS-LOGO_lwsoptimized.webp">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "Architect"],
+    "name": "Wolfblanc Architects",
+    "url": "https://wolfblanc.gr",
+    "sameAs": [
+      "https://wolfblanc.com","https://wolfblanc.es","https://wolfblanc.se",
+      "https://instagram.com/wolfblanc.architects","https://linkedin.com/company/wolfblanc"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ermou 56",
+      "addressLocality": "Athens",
+      "postalCode": "10563",
+      "addressCountry": "GR"
+    },
+    "telephone": "+302103009919",
+    "email": "info@wolfblanc.com",
+    "description": "Αρχιτεκτονικό γραφείο στην Αθήνα. Κατοικίες, εμπορικά έργα και τουριστικά project με διεθνή εμπειρία.",
+    "areaServed": "Ελλάδα",
+    "hasCredential": "TEE-TCG N.168011",
+    "openingHours": ["Mo-Fr 09:00-18:00"]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg:#f0f2f5; --text-primary:#09090b; --text-secondary:#4a4a5a;
+      --accent:#5a6878; --glass-bg:rgba(9,9,11,0.04);
+      --glass-border:rgba(90,104,120,0.15); --glass-border-hover:rgba(90,104,120,0.35);
+      --line:rgba(90,104,120,0.12); --nav-bg:rgba(240,242,245,0.94);
+    }
+    html.dark {
+      --bg:#09090b; --text-primary:#f0f0f2; --text-secondary:#5a5a6a;
+      --accent:#9ba8b8; --glass-bg:rgba(155,168,184,0.04);
+      --glass-border:rgba(155,168,184,0.12); --glass-border-hover:rgba(155,168,184,0.35);
+      --line:rgba(155,168,184,0.12); --nav-bg:rgba(9,9,11,0.94);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      background:var(--bg);color:var(--text-primary);
+      font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+      font-weight:300;line-height:1.9;letter-spacing:0.03em;
+      transition:background .4s,color .4s;overflow-x:hidden
+    }
+    h1,h2,h3,h4,h5,h6{text-transform:uppercase;letter-spacing:0.15em;font-weight:300}
+    a{color:inherit;text-decoration:none;transition:color .3s}
+    img{display:block;max-width:100%}
+    address{font-style:normal}
+
+    /* Cursor */
+    @media(hover:hover){
+      body{cursor:none}
+      #cursor-dot{
+        width:6px;height:6px;background:var(--accent);border-radius:50%;
+        position:fixed;top:0;left:0;margin:-3px 0 0 -3px;
+        pointer-events:none;z-index:10000;opacity:0;transition:opacity .3s;
+        will-change:transform
+      }
+      #cursor-ring{
+        width:28px;height:28px;border:1px solid var(--accent);opacity:0;
+        border-radius:50%;position:fixed;top:0;left:0;margin:-14px 0 0 -14px;
+        pointer-events:none;z-index:9999;transition:opacity .3s;
+        will-change:transform
+      }
+    }
+    @media(hover:none){#cursor-dot,#cursor-ring{display:none}}
+
+    /* Nav */
+    nav{
+      position:fixed;top:0;left:0;width:100%;height:64px;z-index:1000;
+      display:flex;align-items:center;padding:0 48px;
+      transition:background .4s,border-color .4s
+    }
+    nav.scrolled{background:var(--nav-bg);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav-inner{max-width:1100px;width:100%;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+    .nav-logo{font-size:.8rem;letter-spacing:.2em;font-weight:300;color:var(--text-primary)}
+    .nav-logo:hover{color:var(--accent)}
+    .nav-links{display:flex;align-items:center;gap:24px}
+    .nav-link{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;font-weight:300;color:var(--text-secondary)}
+    .nav-link:hover,.nav-link.active{color:var(--text-primary)}
+    .nav-mobile{display:none;align-items:center;gap:16px}
+    .theme-btn{
+      background:none;border:none;cursor:none;color:var(--text-secondary);
+      display:flex;align-items:center;padding:8px;transition:color .3s
+    }
+    .theme-btn:hover{color:var(--text-primary)}
+    @media(max-width:768px){
+      nav{padding:0 24px}
+      .nav-links{display:none}
+      .nav-mobile{display:flex}
+    }
+
+    /* Hero */
+    .hero{position:relative;height:100vh;width:100%;display:flex;align-items:center;overflow:hidden}
+    .hero-grid{
+      position:absolute;inset:0;
+      background-image:
+        repeating-linear-gradient(0deg,var(--line) 0px,transparent 1px,transparent 80px),
+        repeating-linear-gradient(90deg,var(--line) 0px,transparent 1px,transparent 80px);
+      animation:grid-drift 20s linear infinite
+    }
+    @keyframes grid-drift{from{background-position:0 0}to{background-position:80px 80px}}
+    .hero-bg-letter{
+      position:absolute;right:-10vw;top:50%;transform:translateY(-50%);
+      pointer-events:none;user-select:none;opacity:.025;color:var(--accent);
+      font-size:min(80vw,80vh);font-weight:100;line-height:1
+    }
+    .hero-content{max-width:1100px;width:100%;padding:0 48px;margin:0 auto;position:relative;z-index:1}
+    @media(max-width:768px){.hero-content{padding:0 24px}}
+
+    .fade-in{opacity:0;transform:translateY(20px);animation:fadeUp .7s ease forwards}
+    .d0{animation-delay:0s}.d1{animation-delay:.4s}.d2{animation-delay:.8s}
+    .d3{animation-delay:1s}.d4{animation-delay:1.2s}
+    @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+
+    .reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    .eyebrow{display:block;font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--text-secondary);margin-bottom:1rem}
+    .btn-outline{
+      display:inline-block;border:1px solid var(--accent);color:var(--accent);
+      padding:12px 24px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;
+      background:transparent;transition:all .3s;cursor:none
+    }
+    .btn-outline:hover{background:var(--accent);color:var(--bg)}
+
+    section{border-top:1px solid var(--line)}
+    .si{max-width:1100px;margin:0 auto;padding:80px 24px}
+    @media(min-width:769px){.si{padding:128px 48px}}
+
+    /* Studio */
+    .studio-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+    @media(max-width:768px){.studio-grid{grid-template-columns:1fr;gap:40px}}
+    .studio-text{margin-left:12%}
+    @media(max-width:768px){.studio-text{margin-left:0}}
+    .studio-text p{color:var(--text-secondary);margin-bottom:32px}
+    .pills{display:flex;flex-wrap:wrap;gap:8px}
+    .pill{
+      border:1px solid rgba(90,104,120,.5);border-radius:2px;padding:6px 12px;
+      font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-secondary)
+    }
+    .studio-img{
+      position:relative;aspect-ratio:1/1;max-width:460px;width:100%;margin:0 auto;
+      overflow:hidden;border-radius:2px;border:1px solid var(--glass-border)
+    }
+    .studio-img img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .7s ease}
+    .studio-img:hover img{transform:scale(1.05)}
+
+    /* Cards */
+    .cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .cards-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    @media(max-width:900px){.cards-3{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:640px){.cards-3,.cards-2{grid-template-columns:1fr}}
+    .gc{
+      background:var(--glass-bg);border:1px solid var(--glass-border);
+      backdrop-filter:blur(8px);padding:32px;
+      transition:border-color .3s;position:relative;overflow:hidden
+    }
+    .gc:hover{border-color:var(--glass-border-hover)}
+    .cl{width:20px;height:1px;background:var(--accent);margin-bottom:24px}
+    .ct{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;font-weight:400;margin-bottom:16px}
+    .cd{font-size:.875rem;color:var(--text-secondary);line-height:1.7}
+    a.gc{display:block}
+    a.gc .ct{display:flex;justify-content:space-between;align-items:center}
+    .ext{opacity:0;transition:opacity .3s}
+    a.gc:hover .ext{opacity:1}
+
+    /* Process */
+    .proc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+    @media(max-width:640px){.proc-grid{grid-template-columns:1fr}}
+    .pb{background:var(--bg);padding:48px;position:relative;overflow:hidden}
+    .pn{
+      position:absolute;bottom:16px;right:24px;font-size:8rem;font-weight:200;
+      color:var(--text-primary);opacity:.06;line-height:1;pointer-events:none;user-select:none;transition:opacity .3s
+    }
+    .pb:hover .pn{opacity:.1}
+    .pl{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:400;margin-bottom:12px;position:relative;z-index:1}
+    .pd{font-size:.85rem;color:var(--text-secondary);position:relative;z-index:1}
+
+    /* CTA */
+    .cta{
+      position:relative;padding:160px 48px;display:flex;align-items:center;
+      justify-content:center;text-align:center;overflow:hidden;border-top:1px solid var(--line)
+    }
+    @media(max-width:768px){.cta{padding:80px 24px}}
+    .cta-bg{
+      position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+      pointer-events:none;user-select:none;font-size:15vw;font-weight:100;
+      color:var(--accent);opacity:.02;text-transform:uppercase
+    }
+    .cta-inner{position:relative;z-index:1}
+    .cta-inner p{font-size:clamp(1rem,2.5vw,1.6rem);font-weight:300;margin-bottom:40px}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:64px}
+    @media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
+    .contact-grid address{color:var(--text-secondary);line-height:1.8;margin-bottom:24px}
+    .contact-grid .ph{color:var(--text-secondary)}
+    .contact-grid .ph a:hover{color:var(--accent)}
+    .emails{display:flex;flex-direction:column;gap:16px}
+    .em{font-size:1.125rem;transition:color .3s}
+    .em:hover{color:var(--accent)}
+    .socials{display:flex;gap:24px;margin-top:16px}
+    .sl{
+      font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-secondary);
+      display:flex;align-items:center;gap:6px;transition:color .3s
+    }
+    .sl:hover{color:var(--accent)}
+    .lang{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-secondary);margin-top:16px}
+    .map{
+      width:100%;height:320px;border-radius:2px;overflow:hidden;
+      border:1px solid var(--glass-border);margin-top:48px;
+      filter:grayscale(100%) contrast(.88) brightness(1.08) hue-rotate(195deg) saturate(.08);
+      transition:filter .4s
+    }
+    html.dark .map{filter:grayscale(100%) invert(1) contrast(.88) brightness(.92) hue-rotate(195deg) saturate(.12)}
+    @media(min-width:769px){.map{height:400px}}
+    .map iframe{width:100%;height:100%;border:0}
+    .sp{margin-top:80px;padding-top:64px;border-top:1px solid var(--line)}
+    .sp h3{font-size:1.5rem;font-weight:300;margin-bottom:32px}
+    .sp p{font-size:.75rem;color:var(--text-secondary);margin-top:24px}
+    .sp p a{text-decoration:underline}
+    .sp p a:hover{color:var(--accent)}
+
+    /* Footer */
+    footer{border-top:1px solid var(--line);padding:48px}
+    .fi{
+      max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;
+      align-items:center;gap:24px;flex-wrap:wrap;
+      font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-secondary)
+    }
+    @media(max-width:768px){footer{padding:32px 24px}}
+    .fl:hover{color:var(--accent)}
+
+    /* Back to top */
+    #btt{
+      position:fixed;bottom:32px;right:32px;width:40px;height:40px;
+      border:1px solid var(--accent);color:var(--accent);display:flex;
+      align-items:center;justify-content:center;z-index:1000;
+      background:transparent;cursor:none;opacity:0;visibility:hidden;transition:all .3s
+    }
+    #btt.visible{opacity:1;visibility:visible}
+    #btt:hover{background:var(--accent);color:var(--bg)}
+
+    /* Hero type */
+    .h1a{display:block;font-weight:200;font-size:clamp(1.6rem,5vw,6rem);letter-spacing:.15em;line-height:1.1}
+    .h1b{display:block;font-weight:400;font-size:clamp(1.6rem,5vw,6rem);letter-spacing:.15em;line-height:1.1}
+    .hm{font-size:.7rem;letter-spacing:.3em;color:var(--text-secondary);margin-bottom:32px}
+    .hl{font-size:1.125rem;font-weight:300;line-height:1.7;max-width:560px;margin-bottom:48px}
+    .ha{display:flex;flex-wrap:wrap;gap:24px;align-items:center}
+    .hlink{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;display:flex;align-items:center;gap:6px;color:var(--text-secondary);transition:color .3s}
+    .hlink:hover{color:var(--accent)}
+    svg{display:inline-block;vertical-align:middle}
+  </style>
+</head>
+<body>
+
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo" onclick="ss(event,'top')">WOLFBLANC</a>
+    <div class="nav-links">
+      <a href="#studio" class="nav-link" onclick="ss(event,'studio')" data-s="studio">ΣΤΟΥΝΤΙΟ</a>
+      <a href="#ypiresies" class="nav-link" onclick="ss(event,'ypiresies')" data-s="ypiresies">ΥΠΗΡΕΣΙΕΣ</a>
+      <a href="#diadikasia" class="nav-link" onclick="ss(event,'diadikasia')" data-s="diadikasia">ΔΙΑΔΙΚΑΣΙΑ</a>
+      <a href="#epikoinonia" class="nav-link" onclick="ss(event,'epikoinonia')" data-s="epikoinonia">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+      <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+        <svg id="im" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg id="is" style="display:none" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+    </div>
+    <div class="nav-mobile">
+      <a href="#epikoinonia" class="nav-link" onclick="ss(event,'epikoinonia')">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+      <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+        <svg id="imm" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg id="ism" style="display:none" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="top" class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-bg-letter">Α</div>
+  <div class="hero-content">
+    <span class="eyebrow fade-in d0">ΑΡΧΙΤΕΚΤΟΝΙΚΟ ΓΡΑΦΕΙΟ · ΑΘΗΝΑ</span>
+    <h1 style="margin:24px 0">
+      <span class="h1a fade-in d0">ΑΡΧΙΤΕΚΤΟΝΙΚΗ</span>
+      <span class="h1b fade-in d1">ΜΕ ΔΙΕΘΝΗ ΕΜΠΕΙΡΙΑ</span>
+    </h1>
+    <p class="hm fade-in d2">Μέλος ΤΕΕ (Ν.168011) · WELL AP · Απόφοιτοι ΕΜΠ</p>
+    <p class="hl fade-in d3">Αρχιτέκτονες με διεθνή εμπειρία στην Ισπανία, τη Σουηδία και την Ελλάδα — φέρνουμε τη σκανδιναβική μεθοδολογία στον ελληνικό αστικό χώρο.</p>
+    <div class="ha fade-in d4">
+      <a href="#epikoinonia" class="btn-outline" onclick="ss(event,'epikoinonia')">ΔΩΡΕΑΝ ΑΡΧΙΚΗ ΣΥΝΑΝΤΗΣΗ</a>
+      <a href="https://wolfblanc.com" target="_blank" rel="noopener noreferrer" class="hlink">
+        Δείτε τα έργα μας
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Studio -->
+<section id="studio">
+  <div class="si">
+    <div class="studio-grid">
+      <div class="studio-text reveal">
+        <span class="eyebrow">ΤΟ ΣΤΟΥΝΤΙΟ</span>
+        <h2 style="font-size:clamp(1.2rem,2.5vw,1.875rem);margin-bottom:32px">Αρχιτεκτονικό Γραφείο στην Αθήνα</h2>
+        <p>Το Wolfblanc είναι αρχιτεκτονικό γραφείο με παρουσία στην Αθήνα, τη Μαδρίτη και τη Στοκχόλμη. Μέλη ΤΕΕ, απόφοιτοι ΕΜΠ, με 20+ χρόνια εμπειρία σε κατοικίες, εμπορικά έργα και αστικές παρεμβάσεις σε τρεις χώρες. Αξιοποιούμε τη σκανδιναβική ακρίβεια και την εφαρμόζουμε στον ελληνικό αστικό ιστό — από διαμερίσματα στο κέντρο της Αθήνας ως εμπορικούς χώρους και κατοικίες.</p>
+        <div class="pills" style="margin-top:0">
+          <span class="pill">ΤΕΕ Ν.168011</span><span class="pill">WELL AP</span>
+          <span class="pill">COAM N.25160</span><span class="pill">SAR/MSA</span>
+          <span class="pill">ΕΜΠ</span><span class="pill">ETSAM</span>
+        </div>
+      </div>
+      <div class="studio-img reveal">
+        <img src="https://wolfblanc.com/wp-content/uploads/2026/01/wolfblancstudio_lwsoptimized.webp" alt="Wolfblanc Architects — αρχιτεκτονικό γραφείο" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="ypiresies">
+  <div class="si">
+    <span class="eyebrow">ΥΠΗΡΕΣΙΕΣ</span>
+    <h2 style="font-size:clamp(1.2rem,2.5vw,1.875rem);margin-bottom:64px">Υπηρεσίες Αρχιτεκτονικής</h2>
+    <div class="cards-3">
+      <div class="gc reveal"><div class="cl"></div><h3 class="ct">ΑΡΧΙΤΕΚΤΟΝΙΚΗ & ΤΟΠΙΟ</h3><p class="cd">Κτίρια και περιβάλλοντες χώροι ως ένα ενιαίο σύστημα. Χωρική σαφήνεια, ανταπόκριση στο κλίμα, κατασκευασιμότητα.</p></div>
+      <div class="gc reveal"><div class="cl"></div><h3 class="ct">ΕΣΩΤΕΡΙΚΟΙ ΧΩΡΟΙ ΚΑΤΟΙΚΙΑΣ</h3><p class="cd">Χώροι σχεδιασμένοι για καθημερινή χρήση. Φως, υλικό, ατμόσφαιρα. Μετρήσιμη λειτουργικότητα.</p></div>
+      <div class="gc reveal"><div class="cl"></div><h3 class="ct">ΕΜΠΟΡΙΚΗ ΣΤΡΑΤΗΓΙΚΗ & ΣΧΕΔΙΑΣΜΟΣ</h3><p class="cd">Χώροι υψηλής απόδοσης για brands και επενδυτές — hospitality, retail, γραφεία. Μέσω της εξειδικευμένης μας μονάδας EOLOS DESIGN LAB.</p></div>
+      <div class="gc reveal"><div class="cl"></div><h3 class="ct">ΔΙΑΧΕΙΡΙΣΗ ΕΡΓΟΥ</h3><p class="cd">BIM-driven συντονισμός, σαφής επικοινωνία, ποιότητα από την ιδέα ως την παράδοση.</p></div>
+      <div class="gc reveal"><div class="cl"></div><h3 class="ct">ΣΥΜΒΟΥΛΕΥΤΙΚΗ WELL AP</h3><p class="cd">Σχεδιασμός για ανθρώπινη απόδοση. Αέρας, φως, ακουστική, ευεξία.</p></div>
+      <div class="gc reveal"><div class="cl"></div><h3 class="ct">ΣΥΜΒΟΥΛΕΥΤΙΚΗ BIM</h3><p class="cd">Ψηφιακή ακρίβεια σε κάθε φάση. Έξυπνες αποφάσεις, λιγότεροι κίνδυνοι.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Wolfblanc -->
+<section>
+  <div class="si">
+    <span class="eyebrow">ΔΙΑΠΙΣΤΕΥΣΕΙΣ</span>
+    <h2 style="font-size:clamp(1.2rem,2.5vw,1.875rem);margin-bottom:64px">Γιατί Wolfblanc</h2>
+    <div class="cards-2">
+      <div class="gc reveal"><h3 class="ct">ΜΕΛΟΣ ΤΕΕ (Ν.168011)</h3><p class="cd">Αδειοδοτημένοι για αρχιτεκτονικά έργα στην Ελλάδα.</p></div>
+      <div class="gc reveal"><h3 class="ct">WELL AP ΠΙΣΤΟΠΟΙΗΣΗ</h3><p class="cd">Εξειδίκευση στον σχεδιασμό για ανθρώπινη υγεία και ευεξία.</p></div>
+      <div class="gc reveal"><h3 class="ct">ΑΠΟΦΟΙΤΟΙ ΕΜΠ</h3><p class="cd">Ακαδημαϊκή βάση από την κορυφαία πολυτεχνική σχολή της Ελλάδας.</p></div>
+      <div class="gc reveal"><h3 class="ct">ΔΙΕΘΝΗΣ ΕΜΠΕΙΡΙΑ</h3><p class="cd">20+ χρόνια σε έργα στην Ελλάδα, Ισπανία και Σουηδία.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section id="diadikasia">
+  <div class="si">
+    <span class="eyebrow">ΔΙΑΔΙΚΑΣΙΑ</span>
+    <h2 style="font-size:clamp(1.2rem,2.5vw,1.875rem);margin-bottom:64px">Η Διαδικασία μας</h2>
+    <div class="proc-grid">
+      <div class="pb reveal"><p class="pl">01 · ΑΚΟΥΜΕ</p><p class="pd">Κατανοούμε το έργο, τις ανάγκες, τον προϋπολογισμό και τις δυνατότητες.</p><span class="pn">01</span></div>
+      <div class="pb reveal"><p class="pl">02 · ΣΧΕΔΙΑΖΟΥΜΕ</p><p class="pd">Αναπτύσσουμε και οπτικοποιούμε την αρχιτεκτονική ιδέα.</p><span class="pn">02</span></div>
+      <div class="pb reveal"><p class="pl">03 · ΣΧΕΔΙΑΖΟΥΜΕ ΛΕΠΤΟΜΕΡΩΣ</p><p class="pd">Ετοιμάζουμε όλα τα σχέδια, λεπτομέρειες και αποφάσεις κατασκευής.</p><span class="pn">03</span></div>
+      <div class="pb reveal"><p class="pl">04 · ΥΛΟΠΟΙΟΥΜΕ</p><p class="pd">Συνοδεύουμε το έργο μέχρι την αποπεράτωσή του.</p><span class="pn">04</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Specialized -->
+<section>
+  <div class="si">
+    <span class="eyebrow">Η ΠΡΟΣΦΟΡΑ ΜΑΣ</span>
+    <h2 style="font-size:clamp(1.2rem,2.5vw,1.875rem);margin-bottom:64px">Εξειδικευμένες Υπηρεσίες</h2>
+    <div class="cards-2">
+      <a href="https://wolfblanc.com/en/portfolio/for-investors/" target="_blank" rel="noopener noreferrer" class="gc reveal"><h3 class="ct">ΓΙΑ ΕΠΕΝΔΥΤΕΣ <svg class="ext" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></h3><p class="cd">Στρατηγική αρχιτεκτονική για ακίνητα υψηλής απόδοσης. Μετρήσιμο ROI.</p></a>
+      <a href="https://wolfblanc.com/en/portfolio/for-homeowners/" target="_blank" rel="noopener noreferrer" class="gc reveal"><h3 class="ct">ΓΙΑ ΙΔΙΟΚΤΗΤΕΣ ΚΑΤΟΙΚΙΩΝ <svg class="ext" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></h3><p class="cd">Σχεδιασμός και ανακαίνιση κατοικίας στην Ελλάδα, Σουηδία και την Ισπανία.</p></a>
+      <a href="https://wolfblanc.com/en/portfolio/second-homes-spain/" target="_blank" rel="noopener noreferrer" class="gc reveal"><h3 class="ct">ΕΞΟΧΙΚΗ ΚΑΤΟΙΚΙΑ ΣΤΗΝ ΕΛΛΑΔΑ ΚΑΙ ΤΗΝ ΙΣΠΑΝΙΑ <svg class="ext" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></h3><p class="cd">Το εξοχικό σας σπίτι στην Ελλάδα και την Ισπανία — σχεδιασμένο και παραδοθέν με σκανδιναβική ακρίβεια.</p></a>
+      <a href="https://wolfblanc.com/en/portfolio/why-wolfblanc/" target="_blank" rel="noopener noreferrer" class="gc reveal"><h3 class="ct">ΓΙΑΤΙ WOLFBLANC; <svg class="ext" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></h3><p class="cd">Τι μας κάνει διαφορετικούς ως αρχιτεκτονικό γραφείο.</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio CTA -->
+<div class="cta">
+  <div class="cta-bg">ΕΡΓΑ</div>
+  <div class="cta-inner reveal">
+    <p>Είκοσι έργα. Τρεις χώρες. Μία μεθοδολογία.</p>
+    <a href="https://wolfblanc.com" target="_blank" rel="noopener noreferrer" class="btn-outline">ΔΕΙΤΕ ΟΛΑ ΤΑ ΕΡΓΑ →</a>
+  </div>
+</div>
+
+<!-- Contact -->
+<section id="epikoinonia">
+  <div class="si">
+    <span class="eyebrow">ΕΠΙΚΟΙΝΩΝΙΑ</span>
+    <h2 style="font-size:clamp(1.2rem,2.5vw,1.875rem);margin-bottom:64px">Επικοινωνία</h2>
+    <div class="contact-grid reveal">
+      <div>
+        <h3 style="font-size:.875rem;letter-spacing:.2em;margin-bottom:16px">WOLFBLANC ARCHITECTS</h3>
+        <address>Ερμού 56, 10563<br>Αθήνα, Ελλάδα</address>
+        <p class="ph" style="margin-top:16px">Τηλ: <a href="tel:+302103009919">+30 210 300 99 19</a></p>
+      </div>
+      <div>
+        <div class="emails">
+          <a href="mailto:info@wolfblanc.com" class="em">info@wolfblanc.com</a>
+          <a href="mailto:dimitris@wolfblanc.com" class="em">dimitris@wolfblanc.com</a>
+        </div>
+        <div class="socials">
+          <a href="https://instagram.com/wolfblanc.architects" target="_blank" rel="noopener noreferrer" class="sl">Instagram <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://linkedin.com/company/wolfblanc" target="_blank" rel="noopener noreferrer" class="sl">LinkedIn <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+        <p class="lang">Επικοινωνούμε στα ελληνικά, αγγλικά, ισπανικά και σουηδικά.</p>
+      </div>
+    </div>
+    <div class="map reveal">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.1!2d23.7261!3d37.9767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd3a2f14f991%3A0x1!2sErmou+56%2C+Athina+105+63!5e0!3m2!1sel!2sgr!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Wolfblanc Architects location"></iframe>
+    </div>
+    <div class="sp reveal">
+      <h3>Έναρξη Έργου</h3>
+      <a href="mailto:dimitris@wolfblanc.com" class="btn-outline">ΕΝΑΡΞΗ ΕΡΓΟΥ</a>
+      <p>Ή επικοινωνήστε απευθείας στο <a href="mailto:dimitris@wolfblanc.com">dimitris@wolfblanc.com</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fi">
+    <span>WOLFBLANC® ARCHITECTS · Αθήνα · Ελλάδα · © 2026</span>
+    <a href="https://wolfblanc.com" target="_blank" rel="noopener noreferrer" class="fl">wolfblanc.com</a>
+  </div>
+</footer>
+
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script>
+  // Theme
+  const H = document.documentElement;
+  let light = localStorage.getItem('wb-theme') !== 'dark';
+  if (!light) setDark();
+  function setDark(){H.classList.add('dark');show('is');hide('im');show('ism');hide('imm')}
+  function setLight(){H.classList.remove('dark');hide('is');show('im');hide('ism');show('imm')}
+  function show(id){const e=document.getElementById(id);if(e)e.style.display=''}
+  function hide(id){const e=document.getElementById(id);if(e)e.style.display='none'}
+  function toggleTheme(){light=!light;light?setLight():setDark();localStorage.setItem('wb-theme',light?'light':'dark')}
+
+  // Smooth scroll
+  function ss(e,id){e.preventDefault();const el=document.getElementById(id);if(el)window.scrollTo({top:el.offsetTop-64,behavior:'smooth'})}
+
+  // Scroll effects
+  const nav=document.getElementById('nav');
+  const btt=document.getElementById('btt');
+  const links=document.querySelectorAll('.nav-link[data-s]');
+  const sids=['top','studio','ypiresies','diadikasia','epikoinonia'];
+
+  function tick(){
+    const y=window.scrollY;
+    nav.classList.toggle('scrolled',y>20);
+    btt.classList.toggle('visible',y>500);
+    for(const id of sids){
+      const el=document.getElementById(id);
+      if(el){const r=el.getBoundingClientRect();if(r.top<=100&&r.bottom>=100){links.forEach(l=>l.classList.toggle('active',l.dataset.s===id));break}}
+    }
+    document.querySelectorAll('.reveal').forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight*.85)el.classList.add('visible')});
+  }
+  window.addEventListener('scroll',tick,{passive:true});
+  tick();
+
+  // Cursor
+  const dot=document.getElementById('cursor-dot');
+  const ring=document.getElementById('cursor-ring');
+  if(dot&&ring){
+    let rx=0,ry=0,mx=0,my=0,raf=false;
+    window.addEventListener('mousemove',e=>{
+      mx=e.clientX;my=e.clientY;
+      dot.style.transform=`translate(${mx}px,${my}px)`;dot.style.opacity='1';
+      if(!raf){raf=true;animR()}
+    },{passive:true});
+    function animR(){
+      rx+=(mx-rx)*.15;ry+=(my-ry)*.15;
+      ring.style.transform=`translate(${rx}px,${ry}px)`;ring.style.opacity='.5';
+      if(Math.abs(mx-rx)>.1||Math.abs(my-ry)>.1)requestAnimationFrame(animR);else raf=false;
+    }
+  }
+</script>
+</body>
+</html>
