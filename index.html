@@ -14,8 +14,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
 
-  <title>Αρχιτέκτονας Αθήνα | Wolfblanc Architects</title>
-  <meta name="description" content="Αρχιτεκτονικό γραφείο στην Αθήνα. Κατοικίες, ανακαινίσεις και τουριστικά καταλύματα με μεθοδολογία BIM. Μέλος ΤΕΕ (Ν.168011) · WELL AP. Δωρεάν αρχική συνάντηση.">
+  <title>Αρχιτέκτονας Αθήνα και Θεσσαλονίκη - WOLFBLANC ARCHITECTS</title>
+  <meta name="description" content="Αρχιτεκτονικό γραφείο στην Αθήνα και Θεσσαλονίκη. Κατοικίες, ανακαινίσεις και τουριστικά καταλύματα με μεθοδολογία BIM. Μέλος ΤΕΕ (Ν.168011) · WELL AP. Δωρεάν αρχική συνάντηση.">
+  <meta name="keywords" content="αρχιτέκτονας Αθήνα, αρχιτεκτονικό γραφείο Αθήνα, αρχιτέκτονας Ελλάδα, ανακαίνιση Αθήνα, WELL AP αρχιτέκτονας, αρχιτέκτονας Θεσσαλονίκη, αρχιτεκτονικό γραφείο Θεσσαλονίκη, ανακαίνιση Θεσσαλονίκη, εσωτερική διακόσμηση Θεσσαλονίκη, αρχιτέκτονας Βόρεια Ελλάδα">
 
   <link rel="canonical" href="https://wolfblanc.gr">
   <link rel="alternate" hreflang="el" href="https://wolfblanc.gr">
@@ -23,15 +24,15 @@
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="el_GR">
-  <meta property="og:title" content="Αρχιτέκτονας Αθήνα | Wolfblanc Architects">
-  <meta property="og:description" content="Αρχιτεκτονικό γραφείο στην Αθήνα. Μέλος ΤΕΕ · WELL AP · Μεθοδολογία BIM.">
+  <meta property="og:title" content="Αρχιτέκτονας Αθήνα και Θεσσαλονίκη - WOLFBLANC ARCHITECTS">
+  <meta property="og:description" content="Αρχιτεκτονικό γραφείο στην Αθήνα και Θεσσαλονίκη. Μέλος ΤΕΕ · WELL AP · Μεθοδολογία BIM. Δωρεάν αρχική συνάντηση.">
   <meta property="og:url" content="https://wolfblanc.gr">
   <meta property="og:site_name" content="Wolfblanc Architects">
   <meta property="og:image" content="https://wolfblanc.com/wp-content/uploads/2026/01/WOLFBLANC-ARCHITECTS-LOGO_lwsoptimized.webp">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Αρχιτέκτονας Αθήνα | Wolfblanc Architects">
-  <meta name="twitter:description" content="Αρχιτεκτονικό γραφείο στην Αθήνα. Μέλος ΤΕΕ · WELL AP.">
+  <meta name="twitter:title" content="Αρχιτέκτονας Αθήνα και Θεσσαλονίκη - WOLFBLANC ARCHITECTS">
+  <meta name="twitter:description" content="Αρχιτεκτονικό γραφείο στην Αθήνα και Θεσσαλονίκη. Μέλος ΤΕΕ · WELL AP.">
   <meta name="twitter:image" content="https://wolfblanc.com/wp-content/uploads/2026/01/WOLFBLANC-ARCHITECTS-LOGO_lwsoptimized.webp">
 
   <script type="application/ld+json">
@@ -44,17 +45,26 @@
       "https://wolfblanc.com","https://wolfblanc.es","https://wolfblanc.se",
       "https://instagram.com/wolfblanc.architects","https://linkedin.com/company/wolfblanc"
     ],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Ermou 56",
-      "addressLocality": "Athens",
-      "postalCode": "10563",
-      "addressCountry": "GR"
-    },
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "Ermou 56",
+        "addressLocality": "Athens",
+        "postalCode": "10563",
+        "addressCountry": "GR"
+      },
+      {
+        "@type": "PostalAddress",
+        "streetAddress": "Dim. Gounari 78",
+        "addressLocality": "Thessaloniki",
+        "postalCode": "54635",
+        "addressCountry": "GR"
+      }
+    ],
     "telephone": "+302103009919",
     "email": "info@wolfblanc.com",
-    "description": "Αρχιτεκτονικό γραφείο στην Αθήνα. Κατοικίες, εμπορικά έργα και τουριστικά project με διεθνή εμπειρία.",
-    "areaServed": "Ελλάδα",
+    "description": "Αρχιτεκτονικό γραφείο στην Αθήνα και Θεσσαλονίκη. Κατοικίες, εμπορικά έργα και τουριστικά project με διεθνή εμπειρία.",
+    "areaServed": ["Ελλάδα", "Αθήνα", "Θεσσαλονίκη", "Βόρεια Ελλάδα"],
     "hasCredential": "TEE-TCG N.168011",
     "openingHours": ["Mo-Fr 09:00-18:00"]
   }
@@ -233,11 +243,13 @@
     /* Contact */
     .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:64px}
     @media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
-    .contact-grid address{color:var(--text-secondary);line-height:1.8;margin-bottom:24px}
-    .contact-grid .ph{color:var(--text-secondary)}
-    .contact-grid .ph a:hover{color:var(--accent)}
-    .emails{display:flex;flex-direction:column;gap:16px}
-    .em{font-size:1.125rem;transition:color .3s}
+    .contact-col h3{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:400;margin-bottom:4px;color:var(--accent)}
+    .office-label{display:block;font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--text-secondary);margin-bottom:16px}
+    .contact-col address{color:var(--text-secondary);line-height:1.8;margin-bottom:8px}
+    .contact-col .ph{color:var(--text-secondary)}
+    .contact-col .ph a:hover{color:var(--accent)}
+    .emails{display:flex;flex-direction:column;gap:16px;margin-top:16px}
+    .em{font-size:1rem;transition:color .3s}
     .em:hover{color:var(--accent)}
     .socials{display:flex;gap:24px;margin-top:16px}
     .sl{
@@ -247,7 +259,7 @@
     .sl:hover{color:var(--accent)}
     .lang{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-secondary);margin-top:16px}
     .map{
-      width:100%;height:320px;border-radius:2px;overflow:hidden;
+      width:100%;height:340px;border-radius:2px;overflow:hidden;
       border:1px solid var(--glass-border);margin-top:48px;
       filter:grayscale(100%) contrast(.88) brightness(1.08) hue-rotate(195deg) saturate(.08);
       transition:filter .4s
@@ -325,12 +337,12 @@
   <div class="hero-grid"></div>
   <div class="hero-bg-letter">Α</div>
   <div class="hero-content">
-    <span class="eyebrow fade-in d0">ΑΡΧΙΤΕΚΤΟΝΙΚΟ ΓΡΑΦΕΙΟ · ΑΘΗΝΑ</span>
+    <span class="eyebrow fade-in d0">ΑΡΧΙΤΕΚΤΟΝΙΚΟ ΓΡΑΦΕΙΟ · ΑΘΗΝΑ · ΘΕΣΣΑΛΟΝΙΚΗ</span>
     <h1 style="margin:24px 0">
       <span class="h1a fade-in d0">ΑΡΧΙΤΕΚΤΟΝΙΚΗ</span>
       <span class="h1b fade-in d1">ΜΕ ΔΙΕΘΝΗ ΕΜΠΕΙΡΙΑ</span>
     </h1>
-    <p class="hm fade-in d2">Μέλος ΤΕΕ (Ν.168011) · WELL AP · Απόφοιτοι ΕΜΠ</p>
+    <p class="hm fade-in d2">Μέλος ΤΕΕ (Ν.168011) · WELL AP · Αθήνα · Θεσσαλονίκη</p>
     <p class="hl fade-in d3">Αρχιτέκτονες με διεθνή εμπειρία στην Ισπανία, τη Σουηδία και την Ελλάδα — φέρνουμε τη σκανδιναβική μεθοδολογία στον ελληνικό αστικό χώρο.</p>
     <div class="ha fade-in d4">
       <a href="#epikoinonia" class="btn-outline" onclick="ss(event,'epikoinonia')">ΔΩΡΕΑΝ ΑΡΧΙΚΗ ΣΥΝΑΝΤΗΣΗ</a>
@@ -348,8 +360,8 @@
     <div class="studio-grid">
       <div class="studio-text reveal">
         <span class="eyebrow">ΤΟ ΣΤΟΥΝΤΙΟ</span>
-        <h2 style="font-size:clamp(1.2rem,2.5vw,1.875rem);margin-bottom:32px">Αρχιτεκτονικό Γραφείο στην Αθήνα</h2>
-        <p>Το Wolfblanc είναι αρχιτεκτονικό γραφείο με παρουσία στην Αθήνα, τη Μαδρίτη και τη Στοκχόλμη. Μέλη ΤΕΕ, απόφοιτοι ΕΜΠ, με 20+ χρόνια εμπειρία σε κατοικίες, εμπορικά έργα και αστικές παρεμβάσεις σε τρεις χώρες. Αξιοποιούμε τη σκανδιναβική ακρίβεια και την εφαρμόζουμε στον ελληνικό αστικό ιστό — από διαμερίσματα στο κέντρο της Αθήνας ως εμπορικούς χώρους και κατοικίες.</p>
+        <h2 style="font-size:clamp(1.2rem,2.5vw,1.875rem);margin-bottom:32px">Αρχιτεκτονικό Γραφείο στην Αθήνα και Θεσσαλονίκη</h2>
+        <p>Το Wolfblanc είναι αρχιτεκτονικό γραφείο με παρουσία στην Αθήνα, τη Θεσσαλονίκη, τη Μαδρίτη και τη Στοκχόλμη. Μέλη ΤΕΕ, απόφοιτοι ΕΜΠ, με 20+ χρόνια εμπειρία σε κατοικίες, εμπορικά έργα και αστικές παρεμβάσεις σε τρεις χώρες. Αξιοποιούμε τη σκανδιναβική ακρίβεια και την εφαρμόζουμε στον ελληνικό αστικό ιστό.</p>
         <div class="pills" style="margin-top:0">
           <span class="pill">ΤΕΕ Ν.168011</span><span class="pill">WELL AP</span>
           <span class="pill">COAM N.25160</span><span class="pill">SAR/MSA</span>
@@ -357,7 +369,7 @@
         </div>
       </div>
       <div class="studio-img reveal">
-        <img src="https://wolfblanc.com/wp-content/uploads/2026/01/wolfblancstudio_lwsoptimized.webp" alt="Wolfblanc Architects — αρχιτεκτονικό γραφείο" loading="lazy">
+        <img src="https://wolfblanc.com/wp-content/uploads/2026/01/wolfblancstudio_lwsoptimized.webp" alt="Wolfblanc Architects — αρχιτεκτονικό γραφείο Αθήνα Θεσσαλονίκη" loading="lazy">
       </div>
     </div>
   </div>
@@ -436,12 +448,11 @@
     <span class="eyebrow">ΕΠΙΚΟΙΝΩΝΙΑ</span>
     <h2 style="font-size:clamp(1.2rem,2.5vw,1.875rem);margin-bottom:64px">Επικοινωνία</h2>
     <div class="contact-grid reveal">
-      <div>
-        <h3 style="font-size:.875rem;letter-spacing:.2em;margin-bottom:16px">WOLFBLANC ARCHITECTS</h3>
+      <div class="contact-col">
+        <h3>ΑΘΗΝΑ</h3>
+        <span class="office-label">Κεντρικά γραφεία</span>
         <address>Ερμού 56, 10563<br>Αθήνα, Ελλάδα</address>
-        <p class="ph" style="margin-top:16px">Τηλ: <a href="tel:+302103009919">+30 210 300 99 19</a></p>
-      </div>
-      <div>
+        <p class="ph">Τηλ: <a href="tel:+302103009919">+30 210 300 99 19</a></p>
         <div class="emails">
           <a href="mailto:info@wolfblanc.com" class="em">info@wolfblanc.com</a>
           <a href="mailto:dimitris@wolfblanc.com" class="em">dimitris@wolfblanc.com</a>
@@ -452,10 +463,23 @@
         </div>
         <p class="lang">Επικοινωνούμε στα ελληνικά, αγγλικά, ισπανικά και σουηδικά.</p>
       </div>
+      <div class="contact-col">
+        <h3>ΘΕΣΣΑΛΟΝΙΚΗ</h3>
+        <span class="office-label">Βόρεια Ελλάδα</span>
+        <address>Δημ. Γούναρη 78, 546 35<br>Θεσσαλονίκη, Ελλάδα</address>
+        <p class="ph">Τηλ: <a href="tel:+302103009919">+30 210 300 99 19</a></p>
+      </div>
     </div>
+
     <div class="map reveal">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.1!2d23.7261!3d37.9767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd3a2f14f991%3A0x1!2sErmou+56%2C+Athina+105+63!5e0!3m2!1sel!2sgr!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Wolfblanc Architects location"></iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1500000!2d23.0!3d39.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd3a2f14f991%3A0x1!2sErmou+56%2C+Athina+105+63!5e0!3m2!1sel!2sgr!4v1"
+        allowfullscreen loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Wolfblanc Architects — Αθήνα και Θεσσαλονίκη">
+      </iframe>
     </div>
+
     <div class="sp reveal">
       <h3>Έναρξη Έργου</h3>
       <a href="mailto:dimitris@wolfblanc.com" class="btn-outline">ΕΝΑΡΞΗ ΕΡΓΟΥ</a>
@@ -466,7 +490,7 @@
 
 <footer>
   <div class="fi">
-    <span>WOLFBLANC® ARCHITECTS · Αθήνα · Ελλάδα · © 2026</span>
+    <span>WOLFBLANC® ARCHITECTS · Αθήνα · Θεσσαλονίκη · Ελλάδα · © 2026</span>
     <a href="https://wolfblanc.com" target="_blank" rel="noopener noreferrer" class="fl">wolfblanc.com</a>
   </div>
 </footer>
