@@ -144,9 +144,10 @@
       background-image:
         repeating-linear-gradient(0deg,var(--line) 0px,transparent 1px,transparent 80px),
         repeating-linear-gradient(90deg,var(--line) 0px,transparent 1px,transparent 80px);
+      will-change:transform;
       animation:grid-drift 20s linear infinite
     }
-    @keyframes grid-drift{from{background-position:0 0}to{background-position:80px 80px}}
+    @keyframes grid-drift{from{transform:translate(0,0)}to{transform:translate(80px,80px)}}
     .hero-bg-letter{
       position:absolute;right:-10vw;top:50%;transform:translateY(-50%);
       pointer-events:none;user-select:none;opacity:.025;color:var(--accent);
@@ -155,13 +156,13 @@
     .hero-content{max-width:1100px;width:100%;padding:0 48px;margin:0 auto;position:relative;z-index:1}
     @media(max-width:768px){.hero-content{padding:0 24px}}
 
-    .fade-in{opacity:0;transform:translateY(20px);animation:fadeUp .7s ease forwards}
+    .fade-in{opacity:0;transform:translateY(20px);animation:fadeUp .7s ease forwards;will-change:transform,opacity}
     .d0{animation-delay:0s}.d1{animation-delay:.4s}.d2{animation-delay:.8s}
     .d3{animation-delay:1s}.d4{animation-delay:1.2s}
     @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
 
-    .reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease}
-    .reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal{opacity:0;transform:translateY(25px);transition:opacity .6s ease,transform .6s ease;will-change:transform,opacity}
+    .reveal.visible{opacity:1;transform:translateY(0);will-change:auto}
 
     .eyebrow{display:block;font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--text-secondary);margin-bottom:1rem}
     .btn-outline{
@@ -200,7 +201,7 @@
     @media(max-width:640px){.cards-3,.cards-2{grid-template-columns:1fr}}
     .gc{
       background:var(--glass-bg);border:1px solid var(--glass-border);
-      backdrop-filter:blur(8px);padding:32px;
+      padding:32px;
       transition:border-color .3s;position:relative;overflow:hidden
     }
     .gc:hover{border-color:var(--glass-border-hover)}
@@ -482,6 +483,7 @@
       <h3>Έναρξη Έργου</h3>
       <a href="mailto:dimitris@wolfblanc.com" class="btn-outline">ΕΝΑΡΞΗ ΕΡΓΟΥ</a>
       <p>Ή επικοινωνήστε απευθείας στο <a href="mailto:dimitris@wolfblanc.com">dimitris@wolfblanc.com</a></p>
+      <p style="margin-top:32px;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-secondary)">Prefer English? <a href="https://wolfblanc.com/en/contact/" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px;">Visit wolfblanc.com →</a></p>
     </div>
   </div>
 </section>
