@@ -28,12 +28,12 @@
   <meta property="og:description" content="Αρχιτεκτονικό γραφείο στην Αθήνα. Μέλος ΤΕΕ · WELL AP · Μεθοδολογία BIM. Δωρεάν αρχική συνάντηση.">
   <meta property="og:url" content="https://wolfblanc.gr">
   <meta property="og:site_name" content="Wolfblanc Architects">
-  <meta property="og:image" content="https://wolfblanc.com/wp-content/uploads/2026/05/wolfblanc-team.jpeg">
+  <meta property="og:image" content="https://wolfblanc.gr/assets/hero-horizon.webp">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Αρχιτέκτονας Αθήνα - WOLFBLANC ARCHITECTS">
   <meta name="twitter:description" content="Αρχιτεκτονικό γραφείο στην Αθήνα. Μέλος ΤΕΕ · WELL AP.">
-  <meta name="twitter:image" content="https://wolfblanc.com/wp-content/uploads/2026/05/wolfblanc-team.jpeg">
+  <meta name="twitter:image" content="https://wolfblanc.gr/assets/hero-horizon.webp">
 
   <script type="application/ld+json">
   {
@@ -41,13 +41,6 @@
     "@type": ["LocalBusiness", "Architect"],
     "name": "Wolfblanc Architects",
     "url": "https://wolfblanc.gr",
-    "sameAs": [
-      "https://wolfblanc.com",
-      "https://wolfblanc.es",
-      "https://wolfblanc.se",
-      "https://instagram.com/wolfblanc.architects",
-      "https://linkedin.com/company/wolfblanc"
-    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Ermou 56",
@@ -234,6 +227,40 @@
     .cta-inner{position:relative;z-index:1}
     .cta-inner p{font-size:clamp(1rem,2.5vw,1.6rem);font-weight:300;margin-bottom:40px}
 
+
+    /* Curated Work Gallery */
+    .work-marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:var(--glass-bg)}
+    .work-track{display:flex;gap:1px;width:max-content;animation:work-marquee 90s linear infinite}
+    .work-marquee:hover .work-track{animation-play-state:paused}
+    @keyframes work-marquee{to{transform:translateX(-50%)}}
+    .work-tile{position:relative;width:clamp(260px,32vw,480px);aspect-ratio:4/3;overflow:hidden;border-inline:1px solid var(--line);background:var(--glass-bg)}
+    .work-tile picture,.work-tile img{display:block;width:100%;height:100%}
+    .work-tile img{object-fit:cover;filter:saturate(.94) contrast(1.02);transform:translateZ(0)}
+    .work-tile span{position:absolute;left:14px;bottom:14px;padding:9px 12px;background:rgba(9,9,11,.62);color:#f0f0f2;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;backdrop-filter:blur(12px)}
+    .project-gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+    .project{position:relative;min-height:350px;grid-column:span 4;overflow:hidden;background:var(--bg)}
+    .project.large{grid-column:span 8;min-height:520px}
+    .project.tall{min-height:520px}
+    .project picture,.project img{display:block;width:100%;height:100%}
+    .project img{object-fit:cover;filter:saturate(.95) contrast(1.02);transition:transform .7s ease,filter .7s ease}
+    .project:hover img{transform:scale(1.035);filter:saturate(1) contrast(1.04)}
+    .project-meta{position:absolute;left:18px;right:18px;bottom:18px;padding:16px;background:rgba(240,242,245,.84);color:#09090b;backdrop-filter:blur(14px)}
+    .project-meta span{display:block;margin-bottom:8px;color:#5a6878;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase}
+    .project-meta h3{font-size:.88rem;letter-spacing:.12em;margin:0;text-transform:uppercase;font-weight:300}
+    .project-meta p{margin:10px 0 0;color:#4a4a5a;font-size:.84rem;line-height:1.55}
+    html.dark .project-meta{background:rgba(9,9,11,.76);color:#f0f0f2}
+    html.dark .project-meta p{color:#a4a4af}
+    html.dark .project-meta span{color:#9ba8b8}
+    .compact-cards{grid-template-columns:repeat(4,1fr)}
+    .compact-cards .gc{min-height:176px;padding:24px}
+    .compact-cards .ct{font-size:.78rem;line-height:1.42;margin-bottom:12px}
+    .compact-cards .cd{font-size:.94rem;line-height:1.62}
+    .compact-cards .cl{margin-bottom:18px}
+    @media(max-width:900px){.compact-cards{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:640px){.compact-cards{grid-template-columns:1fr}.compact-cards .gc{min-height:auto}}
+    @media(max-width:900px){.project,.project.large{grid-column:span 6}.project.large,.project.tall{min-height:440px}}
+    @media(max-width:640px){.project-gallery{grid-template-columns:1fr}.project,.project.large,.project.tall{grid-column:1;min-height:390px}.work-tile{width:78vw}.project-meta{left:12px;right:12px;bottom:12px}}
+
     /* Contact */
     .contact-grid{display:grid;grid-template-columns:1fr;gap:48px;margin-bottom:64px;max-width:560px}
     .contact-col h3{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;font-weight:400;margin-bottom:4px;color:var(--accent)}
@@ -315,6 +342,7 @@
   <div class="nav-right">
     <div class="nav-links">
       <a href="#studio" class="nav-link" onclick="ss(event,'studio')" data-s="studio" data-el="ΣΤΟΥΝΤΙΟ" data-en="STUDIO">ΣΤΟΥΝΤΙΟ</a>
+      <a href="#erga" class="nav-link" onclick="ss(event,'erga')" data-s="erga" data-el="ΕΡΓΑ" data-en="WORK">ΕΡΓΑ</a>
       <a href="#ypiresies" class="nav-link" onclick="ss(event,'ypiresies')" data-s="ypiresies" data-el="ΥΠΗΡΕΣΙΕΣ" data-en="SERVICES">ΥΠΗΡΕΣΙΕΣ</a>
       <a href="#diadikasia" class="nav-link" onclick="ss(event,'diadikasia')" data-s="diadikasia" data-el="ΔΙΑΔΙΚΑΣΙΑ" data-en="PROCESS">ΔΙΑΔΙΚΑΣΙΑ</a>
       <a href="#epikoinonia" class="nav-link" onclick="ss(event,'epikoinonia')" data-s="epikoinonia" data-el="ΕΠΙΚΟΙΝΩΝΙΑ" data-en="CONTACT">ΕΠΙΚΟΙΝΩΝΙΑ</a>
@@ -344,12 +372,11 @@
       <span class="h1b fade-in d1" data-el="ΜΕ ΔΙΕΘΝΗ ΕΜΠΕΙΡΙΑ" data-en="WITH INTERNATIONAL EXPERIENCE">ΜΕ ΔΙΕΘΝΗ ΕΜΠΕΙΡΙΑ</span>
     </h1>
     <p class="hm fade-in d2" data-el="Μέλος ΤΕΕ (Ν.168011) · WELL AP · Αθήνα" data-en="TEE-TCG N.168011 · WELL AP · Athens">Μέλος ΤΕΕ (Ν.168011) · WELL AP · Αθήνα</p>
-    <p class="hl fade-in d3" data-el="Αρχιτέκτονες με διεθνή εμπειρία στην Ισπανία, τη Σουηδία και την Ελλάδα. Φέρνουμε τη σκανδιναβική μεθοδολογία στον ελληνικό αστικό χώρο." data-en="Architects with international experience across Spain, Sweden, and Greece. We bring Scandinavian methodology into the Greek urban context.">Αρχιτέκτονες με διεθνή εμπειρία στην Ισπανία, τη Σουηδία και την Ελλάδα. Φέρνουμε τη σκανδιναβική μεθοδολογία στον ελληνικό αστικό χώρο.</p>
+    <p class="hl fade-in d3" data-el="Το τοπικό αρχιτεκτονικό σημείο επαφής του Wolfblanc στην Αθήνα. Σχεδιάζουμε κατοικίες, ανακαινίσεις, επενδυτικά ακίνητα και hospitality έργα με διεθνή εμπειρία και ελληνική ακρίβεια." data-en="Wolfblanc's local architecture point of contact in Athens. We design homes, renovations, investment properties and hospitality projects with international experience and Greek precision.">Το τοπικό αρχιτεκτονικό σημείο επαφής του Wolfblanc στην Αθήνα. Σχεδιάζουμε κατοικίες, ανακαινίσεις, επενδυτικά ακίνητα και hospitality έργα με διεθνή εμπειρία και ελληνική ακρίβεια.</p>
     <div class="ha fade-in d4">
       <a href="#epikoinonia" class="btn-outline" onclick="ss(event,'epikoinonia')" data-el="ΔΩΡΕΑΝ ΑΡΧΙΚΗ ΣΥΝΑΝΤΗΣΗ" data-en="FREE INITIAL CONSULTATION">ΔΩΡΕΑΝ ΑΡΧΙΚΗ ΣΥΝΑΝΤΗΣΗ</a>
-      <a href="https://wolfblanc.com" target="_blank" rel="noopener noreferrer" class="hlink">
-        <span data-el="Δείτε τα έργα μας" data-en="View our work">Δείτε τα έργα μας</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      <a href="#erga" class="hlink" onclick="ss(event,'erga')">
+        <span data-el="Δείτε επιλεγμένα έργα" data-en="View selected work">Δείτε επιλεγμένα έργα</span>
       </a>
     </div>
   </div>
@@ -362,7 +389,7 @@
       <div class="studio-text reveal">
         <span class="eyebrow" data-el="ΤΟ ΣΤΟΥΝΤΙΟ" data-en="THE STUDIO">ΤΟ ΣΤΟΥΝΤΙΟ</span>
         <h2 style="font-size:clamp(1.2rem,2.5vw,1.875rem);margin-bottom:32px" data-el="Αρχιτεκτονικό Γραφείο στην Αθήνα" data-en="Architecture Studio in Athens">Αρχιτεκτονικό Γραφείο στην Αθήνα</h2>
-        <p data-el="Το Wolfblanc είναι αρχιτεκτονικό γραφείο με έδρα την Αθήνα και παρουσία στη Μαδρίτη και τη Στοκχόλμη. Μέλη ΤΕΕ, απόφοιτοι ΕΜΠ, με 20+ χρόνια εμπειρία σε κατοικίες, εμπορικά έργα και αστικές παρεμβάσεις σε τρεις χώρες. Αξιοποιούμε τη σκανδιναβική ακρίβεια και την εφαρμόζουμε στον ελληνικό αστικό ιστό." data-en="Wolfblanc is an architecture studio based in Athens with presence in Madrid and Stockholm. TEE registered, NTUA educated, with 20+ years of experience in homes, commercial projects, and urban work across three countries. We apply Scandinavian precision to the Greek urban context.">Το Wolfblanc είναι αρχιτεκτονικό γραφείο με έδρα την Αθήνα και παρουσία στη Μαδρίτη και τη Στοκχόλμη. Μέλη ΤΕΕ, απόφοιτοι ΕΜΠ, με 20+ χρόνια εμπειρία σε κατοικίες, εμπορικά έργα και αστικές παρεμβάσεις σε τρεις χώρες. Αξιοποιούμε τη σκανδιναβική ακρίβεια και την εφαρμόζουμε στον ελληνικό αστικό ιστό.</p>
+        <p data-el="Το Wolfblanc Greece λειτουργεί από την Αθήνα για ανθρώπους που χρειάζονται σοβαρή αρχιτεκτονική καθοδήγηση πριν, κατά τη διάρκεια και μετά την απόφαση για ένα ακίνητο. Μέλη ΤΕΕ, απόφοιτοι ΕΜΠ, με 20+ χρόνια εμπειρία σε κατοικίες, εμπορικά έργα και αστικές παρεμβάσεις." data-en="Wolfblanc Greece works from Athens for people who need serious architectural guidance before, during and after a property decision. TEE registered, NTUA educated, with 20+ years of experience in homes, commercial projects and urban work.">Το Wolfblanc Greece λειτουργεί από την Αθήνα για ανθρώπους που χρειάζονται σοβαρή αρχιτεκτονική καθοδήγηση πριν, κατά τη διάρκεια και μετά την απόφαση για ένα ακίνητο. Μέλη ΤΕΕ, απόφοιτοι ΕΜΠ, με 20+ χρόνια εμπειρία σε κατοικίες, εμπορικά έργα και αστικές παρεμβάσεις.</p>
         <div class="pills" style="margin-top:0">
           <span class="pill">ΤΕΕ Ν.168011</span><span class="pill">WELL AP</span>
           <span class="pill">COAM N.25160</span><span class="pill">SAR/MSA</span>
@@ -370,11 +397,66 @@
         </div>
       </div>
       <div class="studio-img reveal">
-        <img src="https://wolfblanc.com/wp-content/uploads/2026/05/wolfblanc-team.jpeg" alt="Wolfblanc Architects - αρχιτεκτονικό γραφείο Αθήνα" loading="lazy" referrerpolicy="no-referrer">
+        <picture><source srcset="assets/studio-founders.avif" type="image/avif"><img src="assets/studio-founders.webp" alt="Wolfblanc Architects - αρχιτεκτονικό γραφείο Αθήνα" loading="lazy" decoding="async"></picture>
       </div>
     </div>
   </div>
 </section>
+
+
+<!-- Selected Work -->
+<section id="erga">
+  <div class="si">
+    <span class="eyebrow" data-el="ΕΠΙΛΕΓΜΕΝΑ ΕΡΓΑ" data-en="SELECTED WORK">ΕΠΙΛΕΓΜΕΝΑ ΕΡΓΑ</span>
+    <h2 style="font-size:clamp(1.2rem,2.5vw,1.875rem);margin-bottom:32px" data-el="Μια αυστηρά επιλεγμένη εικόνα του τρόπου που δουλεύουμε" data-en="A tightly selected view of how we work">Μια αυστηρά επιλεγμένη εικόνα του τρόπου που δουλεύουμε</h2>
+    <p style="max-width:720px;color:var(--text-secondary);margin-bottom:56px" data-el="Η gallery δεν είναι πλήρες αρχείο. Είναι μια σύντομη, καθαρή ανάγνωση της ποιότητας: κατοικία, ανακαίνιση, επενδυτικό ακίνητο, αστική μελέτη και hospitality." data-en="This gallery is not a full archive. It is a short, clear reading of the quality: home, renovation, investment property, urban study and hospitality.">Η gallery δεν είναι πλήρες αρχείο. Είναι μια σύντομη, καθαρή ανάγνωση της ποιότητας: κατοικία, ανακαίνιση, επενδυτικό ακίνητο, αστική μελέτη και hospitality.</p>
+    <div class="project-gallery">
+      <article class="project large reveal"><picture><source srcset="assets/work-horizon-exterior.avif" type="image/avif"><img src="assets/work-horizon-exterior.webp" alt="Horizon residence by Wolfblanc Architects" loading="lazy" decoding="async"></picture><div class="project-meta"><span>Horizon / Residence</span><h3>Private coastal living</h3><p data-el="Κατοικία όπου τοπίο, σκιά και καθημερινή χρήση γίνονται ένα σύστημα." data-en="A residence where landscape, shade and daily use become one system.">Κατοικία όπου τοπίο, σκιά και καθημερινή χρήση γίνονται ένα σύστημα.</p></div></article>
+      <article class="project reveal"><picture><source srcset="assets/work-k38-living.avif" type="image/avif"><img src="assets/work-k38-living.webp" alt="K38 Athens investment apartment" loading="lazy" decoding="async"></picture><div class="project-meta"><span>K38 / Investment</span><h3>Athens apartment value</h3></div></article>
+      <article class="project reveal"><picture><source srcset="assets/work-plato-masterplan.avif" type="image/avif"><img src="assets/work-plato-masterplan.webp" alt="Plato's Academy urban study" loading="lazy" decoding="async"></picture><div class="project-meta"><span>Plato's Academy</span><h3>Urban district strategy</h3></div></article>
+      <article class="project reveal"><picture><source srcset="assets/work-a75-living.avif" type="image/avif"><img src="assets/work-a75-living.webp" alt="A75 renovation Athens" loading="lazy" decoding="async"></picture><div class="project-meta"><span>A75 / Renovation</span><h3>Light and resale logic</h3></div></article>
+      <article class="project tall reveal"><picture><source srcset="assets/work-norrsken-office.avif" type="image/avif"><img src="assets/work-norrsken-office.webp" alt="Norrsken office workspace by Wolfblanc" loading="lazy" decoding="async"></picture><div class="project-meta"><span>Norrsken / Workspace</span><h3>Nordic precision in practice</h3></div></article>
+      <article class="project reveal"><picture><source srcset="assets/work-selva-entry.avif" type="image/avif"><img src="assets/work-selva-entry.webp" alt="Selva hospitality concept by Wolfblanc Architects" loading="lazy" decoding="async"></picture><div class="project-meta"><span>Selva</span><h3>Hospitality atmosphere</h3></div></article>
+      <article class="project reveal"><picture><source srcset="assets/work-boadilla-exterior.avif" type="image/avif"><img src="assets/work-boadilla-exterior.webp" alt="Boadilla residence exterior" loading="lazy" decoding="async"></picture><div class="project-meta"><span>Boadilla</span><h3>Residential method</h3></div></article>
+      <article class="project reveal"><picture><source srcset="assets/work-nexus-facade.avif" type="image/avif"><img src="assets/work-nexus-facade.webp" alt="Nexus heritage project by Wolfblanc" loading="lazy" decoding="async"></picture><div class="project-meta"><span>Nexus / Heritage</span><h3>Urban continuity and memory</h3></div></article>
+    </div>
+  </div>
+</section>
+
+<div class="work-marquee" aria-label="Selected project images">
+  <div class="work-track">
+    <!-- Set A — 14 images grouped by project -->
+    <div class="work-tile"><picture><source srcset="assets/work-horizon-exterior.avif" type="image/avif"><img src="assets/work-horizon-exterior.webp" alt="Horizon exterior" loading="lazy"></picture><span>Horizon / Residence</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-horizon-interior.avif" type="image/avif"><img src="assets/work-horizon-interior.webp" alt="Horizon interior" loading="lazy"></picture><span>Horizon / Residence</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-boadilla-exterior.avif" type="image/avif"><img src="assets/work-boadilla-exterior.webp" alt="Boadilla exterior" loading="lazy"></picture><span>Boadilla / Residential</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-boadilla-interior.avif" type="image/avif"><img src="assets/work-boadilla-interior.webp" alt="Boadilla interior" loading="lazy"></picture><span>Boadilla / Residential</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-a75-living.avif" type="image/avif"><img src="assets/work-a75-living.webp" alt="A75 living" loading="lazy"></picture><span>A75 / Renovation</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-a75-plan.avif" type="image/avif"><img src="assets/work-a75-plan.webp" alt="A75 plan" loading="lazy"></picture><span>A75 / Renovation</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-k38-living.avif" type="image/avif"><img src="assets/work-k38-living.webp" alt="K38 living" loading="lazy"></picture><span>K38 / Investment</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-k38-terrace.avif" type="image/avif"><img src="assets/work-k38-terrace.webp" alt="K38 terrace" loading="lazy"></picture><span>K38 / Investment</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-plato-masterplan.avif" type="image/avif"><img src="assets/work-plato-masterplan.webp" alt="Plato's Academy masterplan" loading="lazy"></picture><span>Plato's Academy / Urban</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-plato-street.avif" type="image/avif"><img src="assets/work-plato-street.webp" alt="Plato's Academy street level" loading="lazy"></picture><span>Plato's Academy / Urban</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-axis-urban.avif" type="image/avif"><img src="assets/work-axis-urban.webp" alt="Axis urban" loading="lazy"></picture><span>Axis / Urban</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-selva-entry.avif" type="image/avif"><img src="assets/work-selva-entry.webp" alt="Selva entry" loading="lazy"></picture><span>Selva / Hospitality</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-norrsken-office.avif" type="image/avif"><img src="assets/work-norrsken-office.webp" alt="Norrsken office" loading="lazy"></picture><span>Norrsken / Workspace</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-nexus-facade.avif" type="image/avif"><img src="assets/work-nexus-facade.webp" alt="Nexus facade" loading="lazy"></picture><span>Nexus / Heritage</span></div>
+    <!-- Set B — duplicate for seamless loop -->
+    <div class="work-tile"><picture><source srcset="assets/work-horizon-exterior.avif" type="image/avif"><img src="assets/work-horizon-exterior.webp" alt="" loading="lazy"></picture><span>Horizon / Residence</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-horizon-interior.avif" type="image/avif"><img src="assets/work-horizon-interior.webp" alt="" loading="lazy"></picture><span>Horizon / Residence</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-boadilla-exterior.avif" type="image/avif"><img src="assets/work-boadilla-exterior.webp" alt="" loading="lazy"></picture><span>Boadilla / Residential</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-boadilla-interior.avif" type="image/avif"><img src="assets/work-boadilla-interior.webp" alt="" loading="lazy"></picture><span>Boadilla / Residential</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-a75-living.avif" type="image/avif"><img src="assets/work-a75-living.webp" alt="" loading="lazy"></picture><span>A75 / Renovation</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-a75-plan.avif" type="image/avif"><img src="assets/work-a75-plan.webp" alt="" loading="lazy"></picture><span>A75 / Renovation</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-k38-living.avif" type="image/avif"><img src="assets/work-k38-living.webp" alt="" loading="lazy"></picture><span>K38 / Investment</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-k38-terrace.avif" type="image/avif"><img src="assets/work-k38-terrace.webp" alt="" loading="lazy"></picture><span>K38 / Investment</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-plato-masterplan.avif" type="image/avif"><img src="assets/work-plato-masterplan.webp" alt="" loading="lazy"></picture><span>Plato's Academy / Urban</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-plato-street.avif" type="image/avif"><img src="assets/work-plato-street.webp" alt="" loading="lazy"></picture><span>Plato's Academy / Urban</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-axis-urban.avif" type="image/avif"><img src="assets/work-axis-urban.webp" alt="" loading="lazy"></picture><span>Axis / Urban</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-selva-entry.avif" type="image/avif"><img src="assets/work-selva-entry.webp" alt="" loading="lazy"></picture><span>Selva / Hospitality</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-norrsken-office.avif" type="image/avif"><img src="assets/work-norrsken-office.webp" alt="" loading="lazy"></picture><span>Norrsken / Workspace</span></div>
+    <div class="work-tile"><picture><source srcset="assets/work-nexus-facade.avif" type="image/avif"><img src="assets/work-nexus-facade.webp" alt="" loading="lazy"></picture><span>Nexus / Heritage</span></div>
+  </div>
+</div>
 
 <!-- Services -->
 <section id="ypiresies">
@@ -386,55 +468,55 @@
         <div class="cl"></div>
         <h3 class="ct" data-el="ΤΕΧΝΙΚΟΣ ΕΛΕΓΧΟΣ ΠΡΙΝ ΤΗΝ ΑΓΟΡΑ" data-en="PRE-ACQUISITION TECHNICAL DUE DILIGENCE">ΤΕΧΝΙΚΟΣ ΕΛΕΓΧΟΣ ΠΡΙΝ ΤΗΝ ΑΓΟΡΑ</h3>
         <p class="cd" data-el="Βοηθάμε αγοραστές, επενδυτές και family offices να κατανοήσουν ένα ακίνητο πριν δεσμευτούν. Εξετάζουμε χωρική δυναμική, πολεοδομικό ρίσκο, τεχνικούς περιορισμούς, εύρος ανακαίνισης και δυνατότητες δημιουργίας αξίας." data-en="We help buyers, investors, and family offices understand a property before committing. We assess spatial potential, planning risk, technical constraints, renovation scope, and value-creation opportunities.">Βοηθάμε αγοραστές, επενδυτές και family offices να κατανοήσουν ένα ακίνητο πριν δεσμευτούν. Εξετάζουμε χωρική δυναμική, πολεοδομικό ρίσκο, τεχνικούς περιορισμούς, εύρος ανακαίνισης και δυνατότητες δημιουργίας αξίας.</p>
-        <a class="card-link" href="https://wolfblanc.com/pre-acquisition-technical-due-diligence-for-property-buyers/" target="_blank" rel="noopener noreferrer" data-el="Δείτε την υπηρεσία >" data-en="See service >">Δείτε την υπηρεσία ></a>
+        <a class="card-link" href="#epikoinonia" onclick="ss(event,'epikoinonia')" data-el="Συζητήστε την υπηρεσία >" data-en="Discuss service >">Συζητήστε την υπηρεσία ></a>
       </div>
       <div class="gc reveal">
         <div class="cl"></div>
         <h3 class="ct" data-el="ΑΡΧΙΤΕΚΤΟΝΙΚΗ & ΤΟΠΙΟ" data-en="ARCHITECTURE & LANDSCAPE">ΑΡΧΙΤΕΚΤΟΝΙΚΗ & ΤΟΠΙΟ</h3>
         <p class="cd" data-el="Κτίρια και περιβάλλοντες χώροι ως ένα ενιαίο σύστημα. Χωρική σαφήνεια, ανταπόκριση στο κλίμα και κατασκευασιμότητα από την ιδέα έως την ολοκλήρωση." data-en="We design buildings and their environments as one integrated system. From concept to completion, our work balances spatial clarity, environmental response, and buildability.">Κτίρια και περιβάλλοντες χώροι ως ένα ενιαίο σύστημα. Χωρική σαφήνεια, ανταπόκριση στο κλίμα και κατασκευασιμότητα από την ιδέα έως την ολοκλήρωση.</p>
-        <a class="card-link" href="https://wolfblanc.com/architecture-landscape/" target="_blank" rel="noopener noreferrer" data-el="Δείτε την υπηρεσία >" data-en="See service >">Δείτε την υπηρεσία ></a>
+        <a class="card-link" href="#epikoinonia" onclick="ss(event,'epikoinonia')" data-el="Συζητήστε την υπηρεσία >" data-en="Discuss service >">Συζητήστε την υπηρεσία ></a>
       </div>
       <div class="gc reveal">
         <div class="cl"></div>
         <h3 class="ct" data-el="ΔΙΑΧΕΙΡΙΣΗ ΕΡΓΟΥ / ΝΕΑ ΚΑΤΑΣΚΕΥΗ / ΟΛΙΚΗ ΑΝΑΚΑΙΝΙΣΗ" data-en="PROJECT MANAGEMENT / NEW BUILD / TOTAL RENOVATION">ΔΙΑΧΕΙΡΙΣΗ ΕΡΓΟΥ / ΝΕΑ ΚΑΤΑΣΚΕΥΗ / ΟΛΙΚΗ ΑΝΑΚΑΙΝΙΣΗ</h3>
         <p class="cd" data-el="Οδηγούμε έργα με ισχυρό συντονισμό, καθαρή επικοινωνία και ενσωματωμένες ροές BIM, εξασφαλίζοντας δομή, αποδοτικότητα και ποιότητα από την ιδέα έως την παράδοση." data-en="We lead projects with strong coordination, clear communication, and integrated BIM workflows, ensuring structure, efficiency, and quality from concept to completion.">Οδηγούμε έργα με ισχυρό συντονισμό, καθαρή επικοινωνία και ενσωματωμένες ροές BIM, εξασφαλίζοντας δομή, αποδοτικότητα και ποιότητα από την ιδέα έως την παράδοση.</p>
-        <a class="card-link" href="https://wolfblanc.com/project-management/" target="_blank" rel="noopener noreferrer" data-el="Δείτε την υπηρεσία >" data-en="See service >">Δείτε την υπηρεσία ></a>
+        <a class="card-link" href="#epikoinonia" onclick="ss(event,'epikoinonia')" data-el="Συζητήστε την υπηρεσία >" data-en="Discuss service >">Συζητήστε την υπηρεσία ></a>
       </div>
       <div class="gc reveal">
         <div class="cl"></div>
         <h3 class="ct" data-el="ΕΣΩΤΕΡΙΚΟΙ ΧΩΡΟΙ ΚΑΤΟΙΚΙΑΣ" data-en="RESIDENTIAL INTERIORS">ΕΣΩΤΕΡΙΚΟΙ ΧΩΡΟΙ ΚΑΤΟΙΚΙΑΣ</h3>
         <p class="cd" data-el="Σχεδιάζουμε εσωτερικούς χώρους που λειτουργούν και έχουν σωστή αίσθηση. Κάθε χώρος προσαρμόζεται στην καθημερινή χρήση, με προσοχή στο φως, τα υλικά και την ατμόσφαιρα." data-en="We design interior environments that work and feel right. Each space is tailored to daily use, with attention to light, material, and atmosphere.">Σχεδιάζουμε εσωτερικούς χώρους που λειτουργούν και έχουν σωστή αίσθηση. Κάθε χώρος προσαρμόζεται στην καθημερινή χρήση, με προσοχή στο φως, τα υλικά και την ατμόσφαιρα.</p>
-        <a class="card-link" href="https://wolfblanc.com/residential-interiors/" target="_blank" rel="noopener noreferrer" data-el="Δείτε την υπηρεσία >" data-en="See service >">Δείτε την υπηρεσία ></a>
+        <a class="card-link" href="#epikoinonia" onclick="ss(event,'epikoinonia')" data-el="Συζητήστε την υπηρεσία >" data-en="Discuss service >">Συζητήστε την υπηρεσία ></a>
       </div>
       <div class="gc reveal">
         <div class="cl"></div>
         <h3 class="ct" data-el="ΕΜΠΟΡΙΚΗ ΣΤΡΑΤΗΓΙΚΗ & ΕΣΩΤΕΡΙΚΟΙ ΧΩΡΟΙ" data-en="COMMERCIAL STRATEGY & INTERIORS">ΕΜΠΟΡΙΚΗ ΣΤΡΑΤΗΓΙΚΗ & ΕΣΩΤΕΡΙΚΟΙ ΧΩΡΟΙ</h3>
-        <p class="cd" data-el="Χώροι υψηλής απόδοσης για brands και επενδυτές. Από εργασιακούς χώρους και hospitality έως showrooms και retail concepts, το EOLOS DESIGN LAB συνδέει την ταυτότητα με τη λειτουργική απόδοση." data-en="We design high-performance environments for brands and investors. From agile workspaces and hospitality venues to immersive showrooms and retail concepts, EOLOS DESIGN LAB aligns brand identity with operational efficiency.">Χώροι υψηλής απόδοσης για brands και επενδυτές. Από εργασιακούς χώρους και hospitality έως showrooms και retail concepts, το EOLOS DESIGN LAB συνδέει την ταυτότητα με τη λειτουργική απόδοση.</p>
-        <a class="card-link" href="https://wolfblanc.com/eolos-greece/" target="_blank" rel="noopener noreferrer" data-el="Δείτε EOLOS GREECE >" data-en="See EOLOS GREECE >">Δείτε EOLOS GREECE ></a>
+        <p class="cd" data-el="Χώροι υψηλής απόδοσης για επιχειρήσεις, επενδυτές και hospitality concepts. Συνδέουμε την ταυτότητα, τη λειτουργία και την εμπειρία του χρήστη μέσα από αρχιτεκτονική σκέψη." data-en="High-performance spaces for businesses, investors and hospitality concepts. We connect identity, operation and user experience through architectural thinking.">Χώροι υψηλής απόδοσης για επιχειρήσεις, επενδυτές και hospitality concepts. Συνδέουμε την ταυτότητα, τη λειτουργία και την εμπειρία του χρήστη μέσα από αρχιτεκτονική σκέψη.</p>
+        <a class="card-link" href="#epikoinonia" onclick="ss(event,'epikoinonia')" data-el="Συζητήστε την υπηρεσία >" data-en="Discuss service >">Συζητήστε την υπηρεσία ></a>
       </div>
       <div class="gc reveal">
         <div class="cl"></div>
         <h3 class="ct" data-el="ΑΣΤΙΚΟΣ ΣΧΕΔΙΑΣΜΟΣ & MASTERPLANNING" data-en="URBAN DESIGN & MASTERPLANNING">ΑΣΤΙΚΟΣ ΣΧΕΔΙΑΣΜΟΣ & MASTERPLANNING</h3>
         <p class="cd" data-el="Σχεδιάζουμε οικόπεδα, περιοχές και δημόσιους χώρους με καθαρή χωρική στρατηγική. Από την πρώιμη εφικτότητα έως masterplans και δημόσιο χώρο, συνδέουμε πυκνότητα, κίνηση, τοπίο και μακροπρόθεσμη αξία." data-en="We plan sites, districts, and public environments with a clear spatial strategy. From early feasibility to masterplans and public realm concepts, our work connects density, movement, landscape, and long-term value.">Σχεδιάζουμε οικόπεδα, περιοχές και δημόσιους χώρους με καθαρή χωρική στρατηγική. Από την πρώιμη εφικτότητα έως masterplans και δημόσιο χώρο, συνδέουμε πυκνότητα, κίνηση, τοπίο και μακροπρόθεσμη αξία.</p>
-        <a class="card-link" href="https://wolfblanc.com/urban-design-masterplanning/" target="_blank" rel="noopener noreferrer" data-el="Δείτε την υπηρεσία >" data-en="See service >">Δείτε την υπηρεσία ></a>
+        <a class="card-link" href="#epikoinonia" onclick="ss(event,'epikoinonia')" data-el="Συζητήστε την υπηρεσία >" data-en="Discuss service >">Συζητήστε την υπηρεσία ></a>
       </div>
       <div class="gc reveal">
         <div class="cl"></div>
         <h3 class="ct" data-el="ΣΥΜΒΟΥΛΕΥΤΙΚΗ BIM" data-en="BIM CONSULTANCY">ΣΥΜΒΟΥΛΕΥΤΙΚΗ BIM</h3>
         <p class="cd" data-el="Ψηφιακή ακρίβεια σε κάθε φάση. Με εκτενή εμπειρία ως BIM managers, βελτιώνουμε τον συντονισμό, μειώνουμε το ρίσκο και μετατρέπουμε τα δεδομένα σχεδιασμού σε πιο έξυπνες αποφάσεις." data-en="Digital precision at every stage. With extensive experience as BIM managers, we improve coordination, reduce risk, and turn design data into smarter decisions.">Ψηφιακή ακρίβεια σε κάθε φάση. Με εκτενή εμπειρία ως BIM managers, βελτιώνουμε τον συντονισμό, μειώνουμε το ρίσκο και μετατρέπουμε τα δεδομένα σχεδιασμού σε πιο έξυπνες αποφάσεις.</p>
-        <a class="card-link" href="https://wolfblanc.com/bim-consultancy/" target="_blank" rel="noopener noreferrer" data-el="Δείτε την υπηρεσία >" data-en="See service >">Δείτε την υπηρεσία ></a>
+        <a class="card-link" href="#epikoinonia" onclick="ss(event,'epikoinonia')" data-el="Συζητήστε την υπηρεσία >" data-en="Discuss service >">Συζητήστε την υπηρεσία ></a>
       </div>
       <div class="gc reveal">
         <div class="cl"></div>
         <h3 class="ct" data-el="ΣΥΜΒΟΥΛΕΥΤΙΚΗ ΕΥΕΞΙΑΣ" data-en="WELL-BEING CONSULTANCY">ΣΥΜΒΟΥΛΕΥΤΙΚΗ ΕΥΕΞΙΑΣ</h3>
         <p class="cd" data-el="Σχεδιάζουμε για ανθρώπινη απόδοση και υγεία. Ως WELL AP consultants, μετράμε και βελτιστοποιούμε αέρα, φως, ακουστική και άνεση μέσα από τεκμηριωμένο σχεδιασμό." data-en="We design for human performance and health. As WELL AP consultants, we measure and optimize air, light, acoustics, and comfort through evidence-based design.">Σχεδιάζουμε για ανθρώπινη απόδοση και υγεία. Ως WELL AP consultants, μετράμε και βελτιστοποιούμε αέρα, φως, ακουστική και άνεση μέσα από τεκμηριωμένο σχεδιασμό.</p>
-        <a class="card-link" href="https://wolfblanc.com/well-being-consultancy/" target="_blank" rel="noopener noreferrer" data-el="Δείτε την υπηρεσία >" data-en="See service >">Δείτε την υπηρεσία ></a>
+        <a class="card-link" href="#epikoinonia" onclick="ss(event,'epikoinonia')" data-el="Συζητήστε την υπηρεσία >" data-en="Discuss service >">Συζητήστε την υπηρεσία ></a>
       </div>
       <div class="gc reveal">
         <div class="cl"></div>
         <h3 class="ct" data-el="ΑΡΧΙΤΕΚΤΟΝΙΚΗ ΟΠΤΙΚΟΠΟΙΗΣΗ" data-en="ARCHITECTURAL VISUALIZATION">ΑΡΧΙΤΕΚΤΟΝΙΚΗ ΟΠΤΙΚΟΠΟΙΗΣΗ</h3>
         <p class="cd" data-el="Μετατρέπουμε ιδέες σχεδιασμού σε σαφές οπτικό υλικό για αποφάσεις, άδειες, πωλήσεις και επικοινωνία με επενδυτές. Εικόνες, concept studies, animations και staging βοηθούν τον πελάτη να κατανοήσει την αξία πριν την κατασκευή." data-en="We turn design ideas into clear visual material for decisions, permits, sales, and investor communication. From still images and concept studies to animations and staging, visualization helps clients understand value before construction begins.">Μετατρέπουμε ιδέες σχεδιασμού σε σαφές οπτικό υλικό για αποφάσεις, άδειες, πωλήσεις και επικοινωνία με επενδυτές. Εικόνες, concept studies, animations και staging βοηθούν τον πελάτη να κατανοήσει την αξία πριν την κατασκευή.</p>
-        <a class="card-link" href="https://wolfblanc.com/visualization/" target="_blank" rel="noopener noreferrer" data-el="Δείτε την υπηρεσία >" data-en="See service >">Δείτε την υπηρεσία ></a>
+        <a class="card-link" href="#epikoinonia" onclick="ss(event,'epikoinonia')" data-el="Συζητήστε την υπηρεσία >" data-en="Discuss service >">Συζητήστε την υπηρεσία ></a>
       </div>
     </div>
   </div>
@@ -445,11 +527,11 @@
   <div class="si">
     <span class="eyebrow" data-el="ΔΙΑΠΙΣΤΕΥΣΕΙΣ" data-en="CREDENTIALS">ΔΙΑΠΙΣΤΕΥΣΕΙΣ</span>
     <h2 style="font-size:clamp(1.2rem,2.5vw,1.875rem);margin-bottom:64px" data-el="Γιατί Wolfblanc" data-en="Why Wolfblanc">Γιατί Wolfblanc</h2>
-    <div class="cards-2">
+    <div class="cards-2 compact-cards">
       <div class="gc reveal"><h3 class="ct" data-el="ΜΕΛΟΣ ΤΕΕ (Ν.168011)" data-en="TEE-TCG REGISTERED (N.168011)">ΜΕΛΟΣ ΤΕΕ (Ν.168011)</h3><p class="cd" data-el="Αδειοδοτημένοι για αρχιτεκτονικά έργα στην Ελλάδα." data-en="Registered for architectural work in Greece.">Αδειοδοτημένοι για αρχιτεκτονικά έργα στην Ελλάδα.</p></div>
       <div class="gc reveal"><h3 class="ct" data-el="WELL AP ΠΙΣΤΟΠΟΙΗΣΗ" data-en="WELL AP CREDENTIAL">WELL AP ΠΙΣΤΟΠΟΙΗΣΗ</h3><p class="cd" data-el="Εξειδίκευση στον σχεδιασμό για ανθρώπινη υγεία και ευεξία." data-en="Expertise in design for human health and well-being.">Εξειδίκευση στον σχεδιασμό για ανθρώπινη υγεία και ευεξία.</p></div>
       <div class="gc reveal"><h3 class="ct" data-el="ΑΠΟΦΟΙΤΟΙ ΕΜΠ" data-en="NTUA EDUCATED">ΑΠΟΦΟΙΤΟΙ ΕΜΠ</h3><p class="cd" data-el="Ακαδημαϊκή βάση από την κορυφαία πολυτεχνική σχολή της Ελλάδας." data-en="Academic foundation from Greece's leading technical university.">Ακαδημαϊκή βάση από την κορυφαία πολυτεχνική σχολή της Ελλάδας.</p></div>
-      <div class="gc reveal"><h3 class="ct" data-el="ΔΙΕΘΝΗΣ ΕΜΠΕΙΡΙΑ" data-en="INTERNATIONAL EXPERIENCE">ΔΙΕΘΝΗΣ ΕΜΠΕΙΡΙΑ</h3><p class="cd" data-el="20+ χρόνια σε έργα στην Ελλάδα, Ισπανία και Σουηδία." data-en="20+ years across projects in Greece, Spain, and Sweden.">20+ χρόνια σε έργα στην Ελλάδα, Ισπανία και Σουηδία.</p></div>
+      <div class="gc reveal"><h3 class="ct" data-el="ΔΙΕΘΝΗΣ ΕΜΠΕΙΡΙΑ" data-en="INTERNATIONAL EXPERIENCE">ΔΙΕΘΝΗΣ ΕΜΠΕΙΡΙΑ</h3><p class="cd" data-el="20+ χρόνια εμπειρίας με μεθοδολογία που εφαρμόζεται καθαρά στην ελληνική αγορά." data-en="20+ years of experience with a method applied clearly to the Greek market.">20+ χρόνια εμπειρίας με μεθοδολογία που εφαρμόζεται καθαρά στην ελληνική αγορά.</p></div>
     </div>
   </div>
 </section>
@@ -473,21 +555,21 @@
   <div class="si">
     <span class="eyebrow" data-el="Η ΠΡΟΣΦΟΡΑ ΜΑΣ" data-en="OUR OFFER">Η ΠΡΟΣΦΟΡΑ ΜΑΣ</span>
     <h2 style="font-size:clamp(1.2rem,2.5vw,1.875rem);margin-bottom:64px" data-el="Εξειδικευμένες Υπηρεσίες" data-en="Specialized Services">Εξειδικευμένες Υπηρεσίες</h2>
-    <div class="cards-2">
-      <a href="https://wolfblanc.com/en/portfolio/for-investors/" target="_blank" rel="noopener noreferrer" class="gc reveal"><h3 class="ct"><span data-el="ΓΙΑ ΕΠΕΝΔΥΤΕΣ" data-en="FOR INVESTORS">ΓΙΑ ΕΠΕΝΔΥΤΕΣ</span> <svg class="ext" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></h3><p class="cd" data-el="Στρατηγική αρχιτεκτονική για ακίνητα υψηλής απόδοσης. Μετρήσιμο ROI." data-en="Strategic architecture for high-performing real estate. Measurable ROI.">Στρατηγική αρχιτεκτονική για ακίνητα υψηλής απόδοσης. Μετρήσιμο ROI.</p></a>
-      <a href="https://wolfblanc.com/en/portfolio/for-homeowners/" target="_blank" rel="noopener noreferrer" class="gc reveal"><h3 class="ct"><span data-el="ΓΙΑ ΙΔΙΟΚΤΗΤΕΣ ΚΑΤΟΙΚΙΩΝ" data-en="FOR HOMEOWNERS">ΓΙΑ ΙΔΙΟΚΤΗΤΕΣ ΚΑΤΟΙΚΙΩΝ</span> <svg class="ext" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></h3><p class="cd" data-el="Σχεδιασμός και ανακαίνιση κατοικίας στην Ελλάδα, τη Σουηδία και την Ισπανία." data-en="Residential design and renovation in Greece, Sweden, and Spain.">Σχεδιασμός και ανακαίνιση κατοικίας στην Ελλάδα, τη Σουηδία και την Ισπανία.</p></a>
-      <a href="https://wolfblanc.com/en/portfolio/second-homes-spain/" target="_blank" rel="noopener noreferrer" class="gc reveal"><h3 class="ct"><span data-el="ΕΞΟΧΙΚΗ ΚΑΤΟΙΚΙΑ ΣΤΗΝ ΕΛΛΑΔΑ ΚΑΙ ΤΗΝ ΙΣΠΑΝΙΑ" data-en="SECOND HOMES IN GREECE AND SPAIN">ΕΞΟΧΙΚΗ ΚΑΤΟΙΚΙΑ ΣΤΗΝ ΕΛΛΑΔΑ ΚΑΙ ΤΗΝ ΙΣΠΑΝΙΑ</span> <svg class="ext" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></h3><p class="cd" data-el="Το εξοχικό σας σπίτι στην Ελλάδα και την Ισπανία, σχεδιασμένο και παραδοθέν με σκανδιναβική ακρίβεια." data-en="Your second home in Greece or Spain, designed and delivered with Scandinavian precision.">Το εξοχικό σας σπίτι στην Ελλάδα και την Ισπανία, σχεδιασμένο και παραδοθέν με σκανδιναβική ακρίβεια.</p></a>
-      <a href="https://wolfblanc.com/en/portfolio/why-wolfblanc/" target="_blank" rel="noopener noreferrer" class="gc reveal"><h3 class="ct"><span data-el="ΓΙΑΤΙ WOLFBLANC;" data-en="WHY WOLFBLANC?">ΓΙΑΤΙ WOLFBLANC;</span> <svg class="ext" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></h3><p class="cd" data-el="Τι μας κάνει διαφορετικούς ως αρχιτεκτονικό γραφείο." data-en="What makes us different as an architecture studio.">Τι μας κάνει διαφορετικούς ως αρχιτεκτονικό γραφείο.</p></a>
+    <div class="cards-2 compact-cards">
+      <div class="gc reveal"><h3 class="ct" data-el="ΓΙΑ ΕΠΕΝΔΥΤΕΣ" data-en="FOR INVESTORS">ΓΙΑ ΕΠΕΝΔΥΤΕΣ</h3><p class="cd" data-el="Στρατηγική αρχιτεκτονική για ακίνητα υψηλής απόδοσης. Μετρήσιμο ROI χωρίς περιττό θόρυβο." data-en="Strategic architecture for high-performing real estate. Measurable ROI without unnecessary noise.">Στρατηγική αρχιτεκτονική για ακίνητα υψηλής απόδοσης. Μετρήσιμο ROI χωρίς περιττό θόρυβο.</p></div>
+      <div class="gc reveal"><h3 class="ct" data-el="ΓΙΑ ΙΔΙΟΚΤΗΤΕΣ ΚΑΤΟΙΚΙΩΝ" data-en="FOR HOMEOWNERS">ΓΙΑ ΙΔΙΟΚΤΗΤΕΣ ΚΑΤΟΙΚΙΩΝ</h3><p class="cd" data-el="Σχεδιασμός και ανακαίνιση κατοικίας με καθαρή διαδικασία, σωστές αποφάσεις και προσοχή στην καθημερινή ζωή." data-en="Residential design and renovation with a clear process, good decisions and attention to daily life.">Σχεδιασμός και ανακαίνιση κατοικίας με καθαρή διαδικασία, σωστές αποφάσεις και προσοχή στην καθημερινή ζωή.</p></div>
+      <div class="gc reveal"><h3 class="ct" data-el="ΕΞΟΧΙΚΕΣ ΚΑΤΟΙΚΙΕΣ" data-en="VACATION HOMES">ΕΞΟΧΙΚΕΣ ΚΑΤΟΙΚΙΕΣ</h3><p class="cd" data-el="Εξοχικές κατοικίες σχεδιασμένες για τοπίο, σκιά, υλικά, αντοχή και φιλοξενία." data-en="Vacation homes designed around landscape, shade, materials, durability and hospitality.">Εξοχικές κατοικίες σχεδιασμένες για τοπίο, σκιά, υλικά, αντοχή και φιλοξενία.</p></div>
+      <div class="gc reveal"><h3 class="ct" data-el="ΓΙΑΤΙ WOLFBLANC" data-en="WHY WOLFBLANC">ΓΙΑΤΙ WOLFBLANC</h3><p class="cd" data-el="Τοπική παρουσία στην Αθήνα, διεθνής εμπειρία, τεχνική ακρίβεια και ανθρώπινη επικοινωνία." data-en="Local presence in Athens, international experience, technical precision and human communication.">Τοπική παρουσία στην Αθήνα, διεθνής εμπειρία, τεχνική ακρίβεια και ανθρώπινη επικοινωνία.</p></div>
     </div>
   </div>
 </section>
 
 <!-- Portfolio CTA -->
 <div class="cta">
-  <div class="cta-bg" data-el="ΕΡΓΑ" data-en="PROJECTS">ΕΡΓΑ</div>
+  <div class="cta-bg" data-el="ΕΡΓΑ" data-en="WORK">ΕΡΓΑ</div>
   <div class="cta-inner reveal">
-    <p data-el="Είκοσι έργα. Τρεις χώρες. Μία μεθοδολογία." data-en="Twenty projects. Three countries. One methodology.">Είκοσι έργα. Τρεις χώρες. Μία μεθοδολογία.</p>
-    <a href="https://wolfblanc.com" target="_blank" rel="noopener noreferrer" class="btn-outline" data-el="ΔΕΙΤΕ ΟΛΑ ΤΑ ΕΡΓΑ →" data-en="VIEW ALL PROJECTS →">ΔΕΙΤΕ ΟΛΑ ΤΑ ΕΡΓΑ →</a>
+    <p data-el="Το σωστό έργο αρχίζει με καθαρή ανάγνωση του ακινήτου." data-en="The right project starts with a clear reading of the property.">Το σωστό έργο αρχίζει με καθαρή ανάγνωση του ακινήτου.</p>
+    <a href="#epikoinonia" onclick="ss(event,'epikoinonia')" class="btn-outline" data-el="ΜΙΛΗΣΤΕ ΜΑΖΙ ΜΑΣ →" data-en="TALK TO US →">ΜΙΛΗΣΤΕ ΜΑΖΙ ΜΑΣ →</a>
   </div>
 </div>
 
@@ -504,11 +586,6 @@
         <p class="ph">Τηλ: <a href="tel:+302103009919">+30 210 300 99 19</a></p>
         <div class="emails">
           <a href="mailto:info@wolfblanc.com" class="em">info@wolfblanc.com</a>
-          <a href="mailto:dimitris@wolfblanc.com" class="em">dimitris@wolfblanc.com</a>
-        </div>
-        <div class="socials">
-          <a href="https://instagram.com/wolfblanc.architects" target="_blank" rel="noopener noreferrer" class="sl">Instagram <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-          <a href="https://linkedin.com/company/wolfblanc" target="_blank" rel="noopener noreferrer" class="sl">LinkedIn <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
         </div>
         <p class="lang" data-el="Επικοινωνούμε στα ελληνικά, αγγλικά, ισπανικά και σουηδικά." data-en="We communicate in Greek, English, Spanish, and Swedish.">Επικοινωνούμε στα ελληνικά, αγγλικά, ισπανικά και σουηδικά.</p>
       </div>
@@ -525,16 +602,15 @@
 
     <div class="sp reveal">
       <h3 data-el="Έναρξη Έργου" data-en="Start Your Project">Έναρξη Έργου</h3>
-      <a href="mailto:dimitris@wolfblanc.com" class="btn-outline" data-el="ΕΝΑΡΞΗ ΕΡΓΟΥ" data-en="START YOUR PROJECT">ΕΝΑΡΞΗ ΕΡΓΟΥ</a>
-      <p data-el='Ή επικοινωνήστε απευθείας στο <a href="mailto:dimitris@wolfblanc.com">dimitris@wolfblanc.com</a>' data-en='Or contact us directly at <a href="mailto:dimitris@wolfblanc.com">dimitris@wolfblanc.com</a>'>Ή επικοινωνήστε απευθείας στο <a href="mailto:dimitris@wolfblanc.com">dimitris@wolfblanc.com</a></p>
-      <p class="prefer-international" data-el='Prefer the international site? <a href="https://wolfblanc.com" target="_blank" rel="noopener">Visit wolfblanc.com →</a>' data-en='Prefer the international site? <a href="https://wolfblanc.com" target="_blank" rel="noopener">Visit wolfblanc.com →</a>'>Prefer the international site? <a href="https://wolfblanc.com" target="_blank" rel="noopener">Visit wolfblanc.com →</a></p>
+      <a href="mailto:info@wolfblanc.com" class="btn-outline" data-el="ΕΝΑΡΞΗ ΕΡΓΟΥ" data-en="START YOUR PROJECT">ΕΝΑΡΞΗ ΕΡΓΟΥ</a>
+      <p data-el='Ή επικοινωνήστε απευθείας στο <a href="mailto:info@wolfblanc.com">info@wolfblanc.com</a>' data-en='Or contact us directly at <a href="mailto:info@wolfblanc.com">info@wolfblanc.com</a>'>Ή επικοινωνήστε απευθείας στο <a href="mailto:info@wolfblanc.com">info@wolfblanc.com</a></p>
     </div>
   </div>
 </section>
 
 <footer>
   <span data-el="WOLFBLANC® ARCHITECTS · Αθήνα · Ελλάδα · © 2026" data-en="WOLFBLANC® ARCHITECTS · Athens · Greece · © 2026">WOLFBLANC® ARCHITECTS · Αθήνα · Ελλάδα · © 2026</span>
-  <a href="https://wolfblanc.com" target="_blank" rel="noopener noreferrer" class="fl">wolfblanc.com</a>
+  <span><a href="mailto:info@wolfblanc.com" class="fl">info@wolfblanc.com</a> · <a href="https://wolfblanc.com" target="_blank" rel="noopener noreferrer" class="fl">wolfblanc.com</a></span>
 </footer>
 
 <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
@@ -576,7 +652,7 @@
   const nav=document.getElementById('nav');
   const btt=document.getElementById('btt');
   const links=document.querySelectorAll('.nav-link[data-s]');
-  const sids=['top','studio','ypiresies','diadikasia','epikoinonia'];
+  const sids=['top','studio','erga','ypiresies','diadikasia','epikoinonia'];
 
   window.addEventListener('scroll',()=>{
     const y=window.scrollY;
